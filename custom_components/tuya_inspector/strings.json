@@ -1,0 +1,69 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Tuya Device Inspector",
+        "description": "Enter the credentials from your Tuya IoT Platform cloud project. Nothing is sent to your devices; this integration only reads their descriptions.",
+        "data": {
+          "access_id": "Access ID",
+          "access_secret": "Access Secret",
+          "data_center": "Data center"
+        },
+        "data_description": {
+          "access_id": "Your cloud project's Access ID, sometimes shown as Client ID.",
+          "access_secret": "Your cloud project's Access Secret.",
+          "data_center": "The region your Smart Life account is registered in. The wrong one will fail to authenticate."
+        }
+      },
+      "device": {
+        "title": "Choose a device",
+        "description": "Pick the device you want to inspect. Add the integration again to inspect another one.",
+        "data": {
+          "device_id": "Device"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the Tuya API. Check your network and the selected data center.",
+      "invalid_auth": "Tuya rejected these credentials. Check the Access ID and Access Secret, and that the data center matches your account.",
+      "no_devices": "No devices found in this cloud project. Link your Smart Life account on the Devices tab of the Tuya IoT Platform."
+    },
+    "abort": {
+      "already_configured": "This device is already being inspected."
+    }
+  },
+  "selector": {
+    "data_center": {
+      "options": {
+        "us": "Western America",
+        "eu": "Central Europe",
+        "cn": "China",
+        "in": "India"
+      }
+    }
+  },
+  "services": {
+    "export": {
+      "name": "Export device details",
+      "description": "Collect a Tuya device's description and write it to a file you can download and attach to an issue. Runs for every inspected device unless one is named.",
+      "fields": {
+        "entry_id": {
+          "name": "Config entry ID",
+          "description": "Limit the export to a single inspected device. Leave empty to export all of them."
+        }
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "export": {
+        "name": "Export device details"
+      }
+    },
+    "sensor": {
+      "product_id": {
+        "name": "Product ID"
+      }
+    }
+  }
+}

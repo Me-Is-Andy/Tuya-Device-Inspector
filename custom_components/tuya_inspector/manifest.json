@@ -1,0 +1,12 @@
+{
+  "domain": "tuya_inspector",
+  "name": "Tuya Device Inspector",
+  "codeowners": ["@Me-Is-Andy"],
+  "config_flow": true,
+  "documentation": "https://github.com/Me-Is-Andy/Tuya-Device-Inspector",
+  "integration_type": "device",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Me-Is-Andy/Tuya-Device-Inspector/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

@@ -1,0 +1,16 @@
+export:
+  name: Export device details
+  description: >-
+    Collect a Tuya device's description and write it to a file you can
+    download and attach to an issue. Runs for every inspected device unless
+    one is named.
+  fields:
+    entry_id:
+      name: Config entry ID
+      description: >-
+        Limit the export to a single inspected device. Leave empty to export
+        all of them.
+      required: false
+      example: 01M2G0A6KBFKT7PNSA9ZW596TR
+      selector:
+        text:
